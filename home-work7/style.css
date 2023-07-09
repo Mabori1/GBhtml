@@ -766,3 +766,61 @@ summary::-webkit-details-marker {
     gap: 16px;
   }
 }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .center {
+    margin: 0 auto;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .header__link-site {
+    display: none;
+  }
+
+  .promo__img {
+    display: none;
+  }
+
+  .promo {
+    justify-content: center;
+  }
+
+  .promo__content {
+    padding-left: 0;
+    min-height: 363px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .promo__info {
+    margin-top: 0;
+  }
+
+  .promo__title {
+    font-size: 36px;
+    line-height: 30px;
+  }
+
+  .promo__heading {
+    font-size: 19px;
+    line-height: 32px;
+  }
+
+  .sale {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 65px;
+  }
+
+  .big__img {
+    min-height: 110px;
+  }
+
+  .product-box__content {
+    display: flex;
+    flex-direction: column;
+  }
+}
