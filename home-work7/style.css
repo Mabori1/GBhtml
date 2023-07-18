@@ -390,12 +390,28 @@ summary::-webkit-details-marker {
 }
 
 .product__button {
+  position: relative;
   display: block;
   margin-top: 48px;
   border: none;
   background-color: transparent;
   margin-left: auto;
   margin-right: auto;
+}
+.button-text {
+  position: absolute;
+  font-size: 15px;
+  top: 15px;
+  left: 47px;
+  color: #f26376;
+}
+
+.product__button:hover {
+  background-color: #f26376;
+}
+
+.product__button:hover .button-text {
+  color: #fff;
 }
 
 .advantages {
@@ -744,11 +760,13 @@ summary::-webkit-details-marker {
 }
 
 .subscribe {
-  height: 448px;
+  min-height: 448px;
   background-repeat: no-repeat;
   background-image: url(./img/subscribe.jpg);
   max-width: 1600px;
   margin: 0 auto;
+  background-position: center left;
+  background-size: cover;
 }
 
 .subscribe__items {
@@ -806,21 +824,17 @@ summary::-webkit-details-marker {
   align-items: center;
 }
 
-.subscribe__img-form {
-  position: absolute;
-  max-width: 256px;
-  height: 49px;
-  left: -18px;
-  background: rgba(225, 225, 225, 0.1);
-}
-
 .subscribe__input {
+  position: absolute;
+  left: 5%;
   max-width: 170px;
   height: 36px;
   margin-right: 55px;
   z-index: 2;
   padding-left: 10px;
   color: rgba(34, 34, 36, 1);
+  border: none;
+  background-color: #e1e1e1;
 }
 
 .subscribe__button {
@@ -835,6 +849,10 @@ summary::-webkit-details-marker {
   justify-content: space-between;
   align-items: center;
   color: white;
+}
+
+.footer__link:hover {
+  fill: #f16d7f;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -858,6 +876,19 @@ summary::-webkit-details-marker {
   .product-box__content {
     grid-template-columns: repeat(auto-fit, 360px);
     gap: 16px;
+  }
+
+  .subscribe__items {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  .subscribe__item {
+    margin-bottom: 48px;
+  }
+
+  .subscribe__item-right {
+    padding: 0;
   }
 }
 
@@ -916,5 +947,30 @@ summary::-webkit-details-marker {
   .product-box__content {
     display: flex;
     flex-direction: column;
+  }
+
+  .subscribe__items {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  .subscribe__item {
+    margin-bottom: 48px;
+  }
+
+  .subscribe__item-right {
+    padding: 0;
+  }
+
+  .footer {
+    justify-content: center;
+    gap: 40px;
+    padding-top: 43px;
+    padding-bottom: 10px;
+    flex-direction: column-reverse;
+  }
+
+  .footer__text {
+    margin-bottom: 13px;
   }
 }
