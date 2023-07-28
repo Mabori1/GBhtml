@@ -58,6 +58,10 @@ a {
   color: #000000;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 .center {
   padding-left: calc(50% - 570px);
   padding-right: calc(50% - 570px);
@@ -82,9 +86,71 @@ a {
   flex-direction: row;
   align-items: center;
   gap: 33px;
+  position: relative;
 }
 .header__right__menu-label:hover {
   cursor: pointer;
+}
+
+.cartIconWrap {
+  position: relative;
+}
+.cartIconWrap:hover {
+  cursor: pointer;
+}
+.cartIconWrap span {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  color: white;
+  background: #f16d7f;
+  border-radius: 50%;
+  position: absolute;
+  text-align: center;
+  right: -8px;
+  top: -19px;
+  font-size: 12px;
+  line-height: 19px;
+}
+
+.basket {
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  top: 37px;
+  background: white;
+  padding: 10px;
+  border: 1px solid #ebebeb;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+@media (min-width: 340px) {
+  .basket {
+    font-size: 16px;
+  }
+}
+@media (min-width: 552px) {
+  .basket {
+    width: 500px;
+  }
+}
+.basketRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 10px;
+}
+
+.basketHeader {
+  font-weight: bold;
+}
+
+.basketTotal {
+  font-weight: bold;
+  text-align: right;
 }
 
 .menu-box {
@@ -689,17 +755,18 @@ a {
   cursor: pointer;
   color: #F16D7F;
 }
-.filter-sort .sort {
+
+.sort {
   position: relative;
   padding: 0;
   width: -moz-fit-content;
   width: fit-content;
 }
-.filter-sort[open] {
+.sort[open] {
   background: none;
   box-shadow: none;
 }
-.filter-sort__sizes {
+.sort__sizes {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -707,7 +774,7 @@ a {
   color: #6F6E6E;
   margin-left: 9px;
 }
-.filter-sort__content {
+.sort__content {
   padding: 7px 30px 11px 9px;
   position: absolute;
   z-index: 1;
@@ -748,7 +815,6 @@ a {
   box-sizing: border-box;
   margin-top: -65px;
   background-color: #FFFFFF;
-  border: 1px solid #F7F7F7;
 }
 .focus-product-description__details {
   position: relative;
